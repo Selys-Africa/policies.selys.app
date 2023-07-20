@@ -5,54 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="assets/style/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alfa+Slab+One&family=Edu+QLD+Beginner&family=Fugaz+One&family=Kolker+Brush&family=Koulen&family=Pacifico&family=Poppins:wght@400;500;600;700&family=Righteous&family=Rubik+Distressed&family=Sriracha&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="assets/js/script.js" defer></script>
     <title>Privacy Policy for SelysNFC - Selys-Africa</title>
     <script>
-      function updatePrivacyPolicy() {
-        // Récupérer les valeurs sélectionnées par l'utilisateur
-        var selectedApp = document.getElementById("select-app").value;
-        var selectedLanguage = document.getElementById("select-language").value;
-
-        // Charger le contenu de la politique de confidentialité en fonction des sélections de l'utilisateur
-        var privacyPolicyUrl = "";
-        if (selectedApp === "App1") {
-          if (selectedLanguage === "fr") {
-            privacyPolicyUrl = "pages-policies/fr/app1-politique-confidentialite-fr.html";
-          } else {
-            privacyPolicyUrl = "pages-policies/en/app1-privacy-policy-en.html";
-          }
-        } else if (selectedApp === "App2") {
-          if (selectedLanguage === "fr") {
-            privacyPolicyUrl = "pages-policies/fr/app2-politique-confidentialite-fr.html";
-          } else {
-            privacyPolicyUrl = "pages-policies/en/app2-privacy-policy-en.html";
-          }
-        } else if (selectedApp === "App3") {
-          if (selectedLanguage === "fr") {
-            privacyPolicyUrl = "pages-policies/fr/app3-politique-confidentialite-fr.html";
-          } else {
-            privacyPolicyUrl = "pages-policies/en/app3-privacy-policy-en.html";
-          }
-        }
-
-        // Charger le contenu de la politique de confidentialité dans la page
-        var privacyPolicyFrame = document.getElementById("privacy-policy-frame");
-        privacyPolicyFrame.src = privacyPolicyUrl;
-      }
-            // Définir les valeurs sélectionnées par défaut
-            window.onload = function() {
-        document.getElementById("select-app").value = "App1";
-        document.getElementById("select-language").value = "en";
-        updatePrivacyPolicy();
-      };
+      
     </script>
   </head>
-  <body>
+  <body style="overflow-y: hidden;">
     
     <section class="p-3" style="border-bottom: solid 1px #e6e6e6;">
           <header></header>
           <div class="container ">
-            <label for="select-app"><h3>Privacy Policy for:</h3> </label>
+            <label for=""><h3 id='title-privacy'>Privacy Policy for:</h3> </label>
         <select id="select-app" class="selct-form" onchange="updatePrivacyPolicy()">
           <option value="App1">SelysNFC</option>
           <option value="App2">Bea</option>
@@ -64,13 +30,13 @@
           <option value="fr">Français</option>
           <option value="en">English</option>
         </select>
-        </header>
+        
         </div>
      </section>
 
     <section >
-      <div  >
-        <iframe  id="privacy-policy-frame" src="" width="100%" height="600"></iframe>
+      <div>
+        <iframe  id="privacy-policy-frame" src="" width="100%" height="600"  style="margin-bottom:1000px"></iframe>
       </div>
     </section>
     
